@@ -38,18 +38,18 @@ with open(f"./dictionaries/{input('JSON export file path: ./dictionaries/')}", "
     f.write(json.dumps(words, sort_keys=True))
 
 # Find a word
-while False:
-    en_word = input("English word: ")
+# while False:
+#     en_word = input("English word: ")
 
-    matches = []
+#     matches = []
     
-    for definition, word in words.items():
-        if en_word in definition:
-            matches.append(f"{bytes(word, 'utf-8').decode('unicode-escape')} - {str(definition)}")
+#     for definition, word in words.items():
+#         if en_word in definition:
+#             matches.append(f"{bytes(word, 'utf-8').decode('unicode-escape')} - {str(definition)}")
     
-    print(f"Results:\n")
-    for result in matches:
-    #     result = bytes(result, "utf-8")
-    #     print(result.decode("unicode-escape"))
-        print(result)
-    print()
+#     print(f"Results:\n")
+#     for result in matches:
+#     #     result = bytes(result, "utf-8")
+#     #     print(result.decode("unicode-escape"))
+#         print(result)
+#     print()
