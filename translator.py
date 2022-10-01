@@ -6,6 +6,8 @@ dictionaries = [
     ["Old Norse", "old_norse.json"],
     ["Old English", "old_english.json"],
     ["Middle English", "middle_english.json"],
+    ["Old French", "old_french.json"],
+    ["Middle French", "middle_french.json"],
 ]
 
 while True:
