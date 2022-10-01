@@ -9,6 +9,8 @@ dictionaries = [
     ["Old French", "old_french.json"],
     ["Middle French", "middle_french.json"],
     ["French", "french.json"],
+    ["Old High German", "old_high_german.json"],
+    ["Old Irish", "old_irish.json"],
 ]
 
 while True:
