@@ -1,6 +1,7 @@
 # OLD_NORSE = "./raw-dictionaries/kaikki.org-dictionary-OldNorse-all--NmoVhv-non_inflected-non_alternative.json"
 
 import json
+import re
 
 words = {}
 
@@ -8,26 +9,36 @@ with open(f"./raw-dictionaries/{input('JSON raw file path: ./raw-dictionaries/')
     for line in f:
         data = json.loads(line)
         # print(data["word"])
-        if "word" in data:
-            word = str(data["word"])
-        else:
-            continue
+        # if "word" in data:
+        #     word = str(data["word"])
+        # else:
+        #     continue
         
-        if word in words: # If there already exists an entry, skip it
-            continue
-        else:
+        word = json.dumps(data["word"])
+        
+        # if word in words: # If there already exists an entry, skip it
+            # continue
+        # else:
             # words.append(word: data)
-            for sense in data["senses"]:
-                # print(json.dumps(sense["raw_glosses"], indent=2, sort_keys=True))
-                # input("Next raw gloss?")
+        for sense in data["senses"]:
+            # print(json.dumps(sense["raw_glosses"], indent=2, sort_keys=True))
+            # input("Next raw gloss?")
 
-                try:
-                    dict_key = str(sense["raw_glosses"][0])
-                    # print(f"debug: dict_key = '{dict_key}'")
+            try:
+                dict_key = str(sense["raw_glosses"][0])
+                # print(f"debug: dict_key = '{dict_key}'")
 
-                    words[dict_key] = json.dumps(data["word"]) # Index is search term, key is word
-                except:
-                    continue
+                # Replace common error with fix
+                key = re.sub("\[string \"Module\:Quotations\"\]\:118\: Please specify a language code in the first parameter\. The value \"(.*)\" is not valid. See Wiktionary:List of languages.", "(\\1)", dict_key)
+
+                # json.dumps(data["word"])
+
+                if key in words:
+                    words[key].append(word)
+                else:
+                    words[key] = [word] # Index is search term, key is word
+            except:
+                continue
 
 # while True:
 #     # Find a word

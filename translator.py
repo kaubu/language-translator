@@ -1,4 +1,5 @@
 import json
+import re
 
 dictionaries = [
     ["Ancient Greek", "ancient_greek.json"],
@@ -15,36 +16,61 @@ dictionaries = [
 ]
 
 while True:
+    print("Type ':quit' or ':q' to quit")
     print("Choose language:")
 
     for i, d in enumerate(dictionaries):
         print(f"[{i}] {d[0]}")
 
-    language = int(input("Language >> "))
-    language_path = dictionaries[language][1]
+    language = input("Language >> ")
+    if language == ":quit" or language == ":q":
+        print("Goodbye!")
+        break
+    
+    language_no = int(language)
+    language_path = dictionaries[language_no][1]
 
     words = {}
 
     with open(f"./dictionaries/{language_path}", "r") as f:
         words = json.load(f)
     
-    print("Type ':back' to select languages")
-
     while True:
+        # en_word = input("English word: ")
+        print("Type ':back' or ':b' to go back to selecting languages")
+        print("Start word with '=' for exact matches")
         en_word = input("English word: ")
 
-        if en_word == ":back":
+        strict = False
+
+        if en_word == ":back" or en_word == ":b":
             break
+        elif en_word == "":
+            continue
+        elif en_word[0] == "=": # Exact match
+            strict = True
+            en_word = en_word[1:]
 
         matches = []
         
-        for definition, word in words.items():
-            if en_word in definition:
-                matches.append(f"{bytes(word, 'utf-8').decode('unicode-escape')} - {str(definition)}")
+        if strict:
+            for definition, d_words in words.items():
+                for d_word in d_words:
+                    for dd_word in re.split("[,.!? ]", definition):
+                        if en_word == dd_word:
+                            matches.append(f"{bytes(d_word, 'utf-8').decode('unicode-escape')} - {str(definition)}")
+        else:
+            for definition, d_words in words.items():
+                for d_word in d_words:
+                    if en_word in definition:
+                        matches.append(f"{bytes(d_word, 'utf-8').decode('unicode-escape')} - {str(definition)}")
         
         print(f"Results:\n")
         for result in matches:
         #     result = bytes(result, "utf-8")
         #     print(result.decode("unicode-escape"))
-            print(result)
+            try:
+                print(result)
+            except Exception as e:
+                print(f"!!! error !!!\t:\t{e}")
         print()
