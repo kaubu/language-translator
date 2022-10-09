@@ -56,7 +56,7 @@ while True:
         if strict:
             for definition, d_words in words.items():
                 for d_word in d_words:
-                    for dd_word in re.split("[,.!? ]", definition):
+                    for dd_word in re.split("[,.!?; ]", definition):
                         if en_word == dd_word:
                             matches.append(f"{bytes(d_word, 'utf-8').decode('unicode-escape')} - {str(definition)}")
         else:
