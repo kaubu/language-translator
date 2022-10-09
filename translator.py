@@ -17,7 +17,7 @@ dictionaries = [
     # HISTORICAL/ANCIENT LANGUAGES
     ["Ancient Greek", "ancient_greek.json"],
     ["Middle English", "middle_english.json"],
-    ["Old English", "old_english.json"],
+    ["Old English (Anglo Saxon)", "old_english.json"],
     ["Old Armenian", "old_armenian.json"],
     ["Middle French", "middle_french.json"],
     ["Old French", "old_french.json"],
@@ -28,15 +28,21 @@ dictionaries = [
     ["Classical Syriac", "classical_syriac.json"],
     ["Middle Irish", "middle_irish.json"],
     ["Old Irish", "old_irish.json"],
-    ["Middle Dutch", "middle_dutch.json"]
+    ["Middle Dutch", "middle_dutch.json"],
     ["Old Church Slavonic", "old_church_slavonic.json"],
 ]
 
 while True:
     print("Type ':quit' or ':q' to quit")
-    print("Choose language:")
+    print("Choose a language:")
 
     for i, d in enumerate(dictionaries):
+        if i == 0:
+            print("[[Modern Languages]]")
+        elif i == 7:
+            print("\n[[Revived]]")
+        elif i == 8:
+            print("\n[[Ancient Languages]]")
         print(f"[{i}] {d[0]}")
 
     language = input("Language >> ")
