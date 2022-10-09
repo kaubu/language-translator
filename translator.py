@@ -17,7 +17,7 @@ dictionaries = [
     # HISTORICAL/ANCIENT LANGUAGES
     ["Ancient Greek", "ancient_greek.json"],
     ["Middle English", "middle_english.json"],
-    ["Old English (Anglo Saxon)", "old_english.json"],
+    ["Old English (Anglo-Saxon)", "old_english.json"],
     ["Old Armenian", "old_armenian.json"],
     ["Middle French", "middle_french.json"],
     ["Old French", "old_french.json"],

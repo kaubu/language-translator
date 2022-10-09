@@ -1,5 +1,6 @@
 # language-translator
-Lookup words for many Ancient Languages.
+Search through the definitions for many different languages, including ancient
+languages.
 
 ## Usage
 Simply run this to start:
@@ -17,7 +18,7 @@ python translator.py
 * Portuguese
 * Polish
 * French
-### Supposed modern
+### Revived
 * Latin
 ### Ancient
 * Ancient Greek
@@ -38,7 +39,8 @@ python translator.py
 
 ## Notes
 ### Latin
-Most Latin verbs start with "I" as in "I like". Some Latin verbs start with "to" like "to hate".
+Most Latin verbs start with "I" as in "I like". Some Latin verbs start with
+"to" like "to hate".
 
 ## Credits
 Credits to https://kaikki.org/, which supplied the majority of this codebase,
