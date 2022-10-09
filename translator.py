@@ -1,41 +1,5 @@
 import json
 import re
-
-# dictionaries = [
-#     # MODERN LANGUAGES
-#     ["Spanish", "spanish.json"],
-#     ["Italian", "italian.json"],
-#     ["German", "german.json"],
-#     ["Russian", "russian.json"],
-#     ["Portuguese", "portuguese.json"],
-#     ["Polish", "polish.json"],
-#     ["French", "french.json"],
-    
-#     # SUPPOSED MODERN LANGUAGES
-#     ["Latin", "latin.json"],
-
-#     # HISTORICAL/ANCIENT LANGUAGES
-#     ["Ancient Greek", "ancient_greek.json"],
-#     ["Middle English", "middle_english.json"],
-#     ["Old English (Anglo-Saxon)", "old_english.json"],
-#     ["Old Armenian", "old_armenian.json"],
-#     ["Middle French", "middle_french.json"],
-#     ["Old French", "old_french.json"],
-#     ["Old Saxon", "old_saxon.json"],
-#     ["Old High German", "old_high_german.json"],
-#     ["Old Norse", "old_norse.json"],
-#     ["Old Swedish", "old_swedish.json"],
-#     ["Classical Syriac", "classical_syriac.json"],
-#     ["Middle Irish", "middle_irish.json"],
-#     ["Old Irish", "old_irish.json"],
-#     ["Middle Dutch", "middle_dutch.json"],
-#     ["Old Church Slavonic", "old_church_slavonic.json"],
-#     ["Akkadian", "akkadian.json"],
-#     ["Sumerian (busted)", "sumerian.json"], # UNICODE ERRRORS
-#     ["Aramaic", "aramaic.json"],
-#     ["Latin2", "latin2.json"],
-# ]
-
 from os import listdir
 from os.path import isfile, join
 
@@ -58,12 +22,6 @@ while True:
     print("Choose a language:")
 
     for i, d in enumerate(dictionaries):
-        # if i == 0:
-        #     print("[[Modern Languages]]")
-        # elif i == 7:
-        #     print("\n[[Revived]]")
-        # elif i == 8:
-        #     print("\n[[Ancient Languages]]")
         print(f"[{i}] {d[0]}")
 
     language = input("Language >> ")
@@ -80,7 +38,6 @@ while True:
         words = json.load(f)
     
     while True:
-        # en_word = input("English word: ")
         print("Type ':back' or ':b' to go back to selecting languages")
         print("Type ':quit' or ':q' to quit")
         print("Start word with '=' for exact matches")
@@ -103,7 +60,6 @@ while True:
         if strict:
             for definition, d_words in words.items():
                 for d_word in d_words:
-                    # Dict 2.0 structure
                     d_word_real = d_word[0]
                     d_word_pos = d_word[1]
 
@@ -113,7 +69,6 @@ while True:
         else:
             for definition, d_words in words.items():
                 for d_word in d_words:
-                    # Dict 2.0 structure
                     d_word_real = d_word[0]
                     d_word_pos = d_word[1]
                     
@@ -124,8 +79,6 @@ while True:
         
         print(f"Results:\n")
         for result in matches:
-        #     result = bytes(result, "utf-8")
-        #     print(result.decode("unicode-escape"))
             try:
                 print(result)
             except Exception as e:

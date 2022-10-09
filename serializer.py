@@ -1,5 +1,3 @@
-# OLD_NORSE = "./raw-dictionaries/kaikki.org-dictionary-OldNorse-all--NmoVhv-non_inflected-non_alternative.json"
-
 import json
 import re
 
@@ -39,13 +37,11 @@ def serialize_file(dictionary_path, new_file_name):
                 except:
                     continue
 
-    # with open(f"./dictionaries/{input('JSON export file path: ./dictionaries/')}", "w") as f:
     with open(f"./dictionaries/{new_file_name}", "w") as f:
         f.write(json.dumps(words, sort_keys=True))
 
 
 if mode == "1":
-    # with open(f"./raw-dictionaries/{input('JSON raw file path: ./raw-dictionaries/')}", "r", encoding="utf-8") as f:
     print("Type :q to quit")
 
     while True:
@@ -65,7 +61,7 @@ elif mode == "2":
     directory = input("Directory [./raw-dictionaries]: ")
     if directory == "": directory = "./raw-dictionaries"
 
-    files = [] #[f for f in listdir(directory) if isfile(join(directory, f))]
+    files = []
     for f in listdir(directory):
         if isfile(join(directory, f)):
             if f.endswith(".json"):
