@@ -1,0 +1,82 @@
+{
+  "categories": [],
+  "etymology_templates": [
+    {
+      "args": {
+        "1": "akk",
+        "2": "sem-pro",
+        "3": "*wa",
+        "t": "and"
+      },
+      "expansion": "Proto-Semitic *wa (\u201cand\u201d)",
+      "name": "inh"
+    },
+    {
+      "args": {
+        "1": "ar",
+        "2": "\u0648\u064e"
+      },
+      "expansion": "Arabic \u0648\u064e (wa)",
+      "name": "cog"
+    },
+    {
+      "args": {
+        "1": "hbo",
+        "2": "\u05d5\u05b0\u05be",
+        "tr": "w\u0259-"
+      },
+      "expansion": "Biblical Hebrew \u05d5\u05b0\u05be (w\u0259-)",
+      "name": "cog"
+    }
+  ],
+  "etymology_text": "From Proto-Semitic *wa (\u201cand\u201d). Cognate with Arabic \u0648\u064e (wa) and Biblical Hebrew \u05d5\u05b0\u05be (w\u0259-).",
+  "lang": "Akkadian",
+  "lang_code": "akk",
+  "pos": "conj",
+  "senses": [
+    {
+      "examples": [
+        {
+          "ref": "1755\u20131750 BCE, King Hammurabi of Babylon, CDLI, transl., Hammurabi Code, The Louvre, Prologue, lines 3-5",
+          "text": "\ud808\udc2d\ud808\udc97\ud808\udda4 \ud808\udc41\ud808\udc96 \ud808\udead\ud808\ude28\ud808\udc8a \ud808\udd47 \ud808\udd55\ud808\udf62\ud808\udc74\n\u1d48en-lil\u2082 be-el \u0161a-me-e u\u2083 er-\u1e63e-tim\nEnlil b\u0113l \u0161am\u00ea u er\u1e63etimEnlil, lord of heaven and earth",
+          "type": "quotation"
+        }
+      ],
+      "glosses": [
+        "and"
+      ],
+      "id": "u-akk-conj-YgERG4Og",
+      "raw_glosses": [
+        "and"
+      ]
+    },
+    {
+      "categories": [],
+      "examples": [
+        {
+          "english": "also, send me almonds",
+          "roman": "u\u2083 \u0161i-iq-da-am \u0161u-bi-lam /u \u0161iqdam \u0161\u016bbilam/",
+          "text": "\ud808\udd47 \ud808\udd46\ud808\udd45\ud808\udc55\ud808\udd20 \ud808\uded7\ud808\udc49\ud808\uddf4"
+        },
+        {
+          "ref": "1755\u20131750 BCE, King Hammurabi of Babylon, OMNIKA Foundation, transl., Hammurabi Code, The Louvre, Law 129",
+          "text": "\ud808\udef3\ud808\ude20\ud808\udc38\ud808\udead\ud808\udc1c \ud808\udc00\ud808\ude7f\ud808\udd46 \ud808\udc09\ud808\udefe\ud808\udf63\ud808\udd57\ud808\ude91\ud808\udd4e \ud808\udead\ud808\ude4c\ud808\udd4e \ud808\udd3f\ud808\ude3e\ud808\udd3f\ud808\udf05\ud808\udd46 \ud808\udc09\ud808\udeeb\ud808\ude8d\ud808\udc41 \ud808\udd3f\ud808\udd57\ud808\udf6a\ud808\uded7\ud808\ude61\ud808\udefe\ud808\ude20 \ud808\udc00\ud808\ude3e \ud808\ude28\ud808\udc8a \ud808\udd3f\ud808\ude3e\ud808\udc1c\ud808\udc7a\ud808\udf11 \ud808\uded7\ud808\ude61\ud808\udefe \ud808\udef3\ud808\ude20\ud808\udc41\ud808\udc96 \ud808\udc38\ud808\udead\ud808\udc74 \ud808\udc38\ud808\udead\ud808\udf6a\ud808\udf11\ud808\udc40\ud808\uddb7\ud808\udc1c \ud808\udd47\ud808\udeac\ud808\ude92\ud808\udf1d \ud808\udc35\ud808\udf6a\ud808\udf11\ud808\udc40\ud808\uddb7\ud808\udc1c\n\u0161um-ma a\u0161-\u0161a-at a-wi-lim it-ti zi-ka-ri-im \u0161a-ni-im i-na i-tu-lim it-ta-a\u1e63-bat i-ka-su\u2082-\u0161u-nu-ti-ma a-na me-e i-na-ad-du-u\u2082-\u0161u-nu-ti \u0161um-ma be-el a\u0161-\u0161a-tim a\u0161-\u0161a-su\u2082 u\u2082-ba-la-a\u1e6d u\u2083 \u0161ar-ru-um IR\u2083-su\u2082 u\u2082-ba-la-a\u1e6d\n\u0161umma a\u0161\u0161at aw\u012blim itti zikarim \u0161an\u00eem ina it\u016blim itta\u1e63bat, ikass\u00fb\u0161un\u016bt\u012b-ma ana m\u00ea inadd\u00fb\u0161un\u016bti; \u0161umma b\u0113l a\u0161\u0161atim a\u0161\u0161assu uballa\u1e6d, u \u0161arrum warassu uballa\u1e6d.If an aw\u012blum's wife has been caught lying with another man, they will be bound and thrown into the water; if the wife's lord wishes to spare his wife, also the king may spare his servant.",
+          "type": "quotation"
+        }
+      ],
+      "glosses": [
+        "moreover, likewise, also, too"
+      ],
+      "id": "u-akk-conj-TRh8O1FT",
+      "raw_glosses": [
+        "moreover, likewise, also, too"
+      ]
+    }
+  ],
+  "sounds": [
+    {
+      "ipa": "/u/"
+    }
+  ],
+  "word": "u"
+}
