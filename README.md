@@ -3,9 +3,11 @@ Search through the definitions for many different languages, including ancient
 languages.
 
 ## Note!!!
-Rather than translating entire sentences, this looks up one word or phrase at
-a time. Funtionality is planned in the future to search entire sentences,
+* Rather than translating entire sentences, this looks up one word or phrase
+at a time. Funtionality is planned in the future to search entire sentences,
 split and tokenize them, then return the results.
+* The entire `dictionaries/` folder is approximately 63MB, so if space is a
+concern, do not download this.
 
 ## Usage
 Simply run this to start:
