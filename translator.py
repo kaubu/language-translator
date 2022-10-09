@@ -2,27 +2,33 @@ import json
 import re
 
 dictionaries = [
-    ["Ancient Greek", "ancient_greek.json"],
-    ["Latin", "latin.json"],
-    ["Old Norse", "old_norse.json"],
-    ["Old English", "old_english.json"],
-    ["Middle English", "middle_english.json"],
-    ["Old French", "old_french.json"],
-    ["Middle French", "middle_french.json"],
-    ["French", "french.json"],
-    ["Old High German", "old_high_german.json"],
-    ["Old Irish", "old_irish.json"],
-    ["Middle Irish", "middle_irish.json"],
-    ["Old Church Slavonic", "old_church_slavonic.json"],
-    ["Russian", "russian.json"],
+    # MODERN LANGUAGES
     ["Spanish", "spanish.json"],
     ["Italian", "italian.json"],
+    ["German", "german.json"],
+    ["Russian", "russian.json"],
     ["Portuguese", "portuguese.json"],
     ["Polish", "polish.json"],
+    ["French", "french.json"],
+    
+    # SUPPOSED MODERN LANGUAGES
+    ["Latin", "latin.json"],
+
+    # HISTORICAL/ANCIENT LANGUAGES
+    ["Ancient Greek", "ancient_greek.json"],
+    ["Middle English", "middle_english.json"],
+    ["Old English", "old_english.json"],
     ["Old Armenian", "old_armenian.json"],
-    ["Old Swedish", "old_swedish.json"],
+    ["Middle French", "middle_french.json"],
+    ["Old French", "old_french.json"],
     ["Old Saxon", "old_saxon.json"],
+    ["Old High German", "old_high_german.json"],
+    ["Old Norse", "old_norse.json"],
+    ["Old Swedish", "old_swedish.json"],
     ["Classical Syriac", "classical_syriac.json"],
+    ["Middle Irish", "middle_irish.json"],
+    ["Old Irish", "old_irish.json"],
+    ["Old Church Slavonic", "old_church_slavonic.json"],
 ]
 
 while True:
