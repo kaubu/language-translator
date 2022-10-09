@@ -1,18 +1,40 @@
 # language-translator
 Lookup words for many Ancient Languages.
 
+## Usage
+Simply run this to start:
+
+```bash
+python translator.py
+```
+
 ## Built-in languages
-* Ancient Greek
+### Modern
+* Spanish
+* Italian
+* German
+* Russian
+* Portuguese
+* Polish
+* French
+### Supposed modern
 * Latin
-* Old Norse
-* Old English
+### Ancient
+* Ancient Greek
 * Middle English
-* Old French
+* Old English (Anglo-Saxon)
+* Old Armenian
 * Middle French
-* French (Modern)
+* Old French
+* Old Saxon
 * Old High German
-* Old Irish
+* Old Norse
+* Old Swedish
+* Classical Syriac
 * Middle Irish
+* Old Irish
+* Middle Dutch
+* Old Church Slavonic
 
 ## Notes
 ### Latin

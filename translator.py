@@ -28,6 +28,7 @@ dictionaries = [
     ["Classical Syriac", "classical_syriac.json"],
     ["Middle Irish", "middle_irish.json"],
     ["Old Irish", "old_irish.json"],
+    ["Middle Dutch", "middle_dutch.json"]
     ["Old Church Slavonic", "old_church_slavonic.json"],
 ]
 
