@@ -18,6 +18,7 @@ dictionaries = [
     ["Spanish", "spanish.json"],
     ["Italian", "italian.json"],
     ["Portuguese", "portuguese.json"],
+    ["Polish", "polish.json"],
 ]
 
 while True:
