@@ -11,6 +11,8 @@ for f in listdir(dict_dir):
         if f.endswith(".json"):
             files.append(f)
 
+files.sort()
+
 dictionaries = []
 for file in files:
     file_name = file[:-5]
