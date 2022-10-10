@@ -9,8 +9,8 @@ languages.
 * Rather than translating entire sentences, this looks up one word or phrase
 at a time. Funtionality is planned in the future to search entire sentences,
 split and tokenize them, then return the results.
-* The entire `dictionaries/` folder is approximately 81MB, so if space is a
-concern, do not download this.
+* The entire `dictionaries/` folder is approximately 91MB, so if space is a
+concern, do not download that directory.
 
 ## Usage
 Simply run this to start:
@@ -18,6 +18,15 @@ Simply run this to start:
 ```bash
 python translator.py
 ```
+
+## Add a language
+1. Download a language from https://kaikki.org/dictionary/, and put the 
+resulting file in the `raw-dictionaries/` directory.
+2. Run `python serializer.py`, and select either **Manual installation** (for
+converting one dictionary at a time) or **Serialize all .json files in a**
+**directory** to convert every .json file in that directory.
+3. You're done. Once the conversion has finished, it will automatically be
+listed in the `translator.py` program once run.
 
 ## Built-in languages
 ### Modern
