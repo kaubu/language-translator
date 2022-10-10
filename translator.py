@@ -21,10 +21,10 @@ for file in files:
     dictionaries.append([file_name.title(), f"{file}"])
 
 def print_help():
-    print("\nType ':back' or ':b' to go back to selecting languages")
-    print("Type ':quit' or ':q' to quit")
-    print("Start word with '=' for exact matches (words better for single words)")
-    print("Start word with '?' if you encounter an encoding error")
+    print("\nType ':back' or ':b' to go back to selecting languages\n\
+Type ':quit' or ':q' to quit\n\
+Start word with '=' for exact matches (words better for single words)\n\
+")
 
 def javascript_to_python_unicode(js_unicode: str):
     js_unicode = bytes(temp, "utf-8").decode("unicode_escape") # Turn \\ into \, but it's sitll a Javascript unicode
@@ -59,7 +59,6 @@ while True:
         en_word = input("English word: ")
 
         strict = False
-        unicode_mode = True
 
         if en_word == ":back" or en_word == ":b":
             break
@@ -73,9 +72,6 @@ while True:
         elif en_word == ":h" or en_word == ":help":
             print_help()
             continue
-        elif en_word[0] == "?": # Unicode error
-            unicode_mode = False
-            en_word = en_word[1:]
 
         matches = []
         

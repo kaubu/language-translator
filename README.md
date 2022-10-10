@@ -28,6 +28,7 @@ python translator.py
 * Portuguese
 * Polish
 * French
+* Japanese
 ### Revived
 * Latin
 ### Ancient
@@ -52,7 +53,7 @@ python translator.py
 * Egyptian
 * Gothic
 * Sanskrit
-* Sumerian (Busted)
+* Sumerian
 * Tocharian B
 
 ## Misc. Notes
