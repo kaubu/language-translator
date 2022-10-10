@@ -9,7 +9,7 @@ languages.
 * Rather than translating entire sentences, this looks up one word or phrase
 at a time. Funtionality is planned in the future to search entire sentences,
 split and tokenize them, then return the results.
-* The entire `dictionaries/` folder is approximately 91MB, so if space is a
+* The entire `dictionaries/` folder is approximately 92MB, so if space is a
 concern, do not download that directory.
 
 ## Usage
@@ -64,6 +64,9 @@ listed in the `translator.py` program once run.
 * Sanskrit
 * Sumerian
 * Tocharian B
+### IAL/Conlangs
+* Esperanto
+* Ido
 
 ## Misc. Notes
 ### Verbs
