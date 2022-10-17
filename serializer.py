@@ -20,8 +20,11 @@ def serialize_file(dictionary_path, new_file_name):
                 print(json.dumps(data, indent=2, sort_keys=True))
                 input("Continue? ")
             
-            word = json.dumps(data["word"])
-            pos = json.dumps(data["pos"]) # Part of Speech
+            try:
+                word = json.dumps(data["word"])
+                pos = json.dumps(data["pos"]) # Part of Speech
+            except:
+                continue # No word or parts of speech
             
             for sense in data["senses"]:
                 try:
