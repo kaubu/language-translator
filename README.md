@@ -29,6 +29,8 @@ converting one dictionary at a time) or **Serialize all .json files in a**
 listed in the `translator.py` program once run.
 
 ## Built-in languages
+### Proto-Languages
+* Proto-Indo-European
 ### Modern
 * Spanish
 * Italian
