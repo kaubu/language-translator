@@ -20,13 +20,25 @@ python translator.py
 ```
 
 ## Add a language
+### Pre-built
 1. Download a language from https://kaikki.org/dictionary/, and put the 
-resulting file in the `raw-dictionaries/` directory.
-2. Run `python serializer.py`, and select either **Manual installation** (for
+resulting file in the `raw-dictionaries/` directory. For all the pre-packaged
+dictionaries, I have used the "Non-inflected, non-alternative" word senses
+JSON file.
+2. Change the file name to end in `.json`. For a more aesthetically pleasing
+listing in the languages list, change the file name to just its language name,
+e.g. change `kaikki.org-dictionary-Arabic-all-no-YVQKzm` -> `arabic.json`.
+3. Run `python serializer.py`, and select either **Manual installation** (for
 converting one dictionary at a time) or **Serialize all .json files in a**
 **directory** to convert every .json file in that directory.
-3. You're done. Once the conversion has finished, it will automatically be
+4. You're done. Once the conversion has finished, it will automatically be
 listed in the `translator.py` program once run.
+### Manually
+If a language is not already made on that website, such as Proto-Indo-European,
+you can follow these steps.
+
+**TODO**
+<!-- 1. Download the  -->
 
 ## Built-in languages
 ### Proto-Languages
@@ -40,6 +52,7 @@ listed in the `translator.py` program once run.
 * Polish
 * French
 * Japanese
+* Arabic
 ### Revived
 * Latin
 ### Ancient
