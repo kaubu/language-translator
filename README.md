@@ -23,7 +23,7 @@ python translator.py
 ### Pre-built
 1. Download a language from https://kaikki.org/dictionary/, and put the 
 resulting file in the `raw-dictionaries/` directory. For all the pre-packaged
-dictionaries, I have used the "Non-inflected, non-alternative" word senses
+dictionaries, I did use the "Non-inflected, non-alternative" word senses, but have now used the All senses
 JSON file.
 2. Change the file name to end in `.json`. For a more aesthetically pleasing
 listing in the languages list, change the file name to just its language name,

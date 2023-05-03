@@ -1,3 +1,4 @@
 raw-dictionaries/*.json
 dictionaries/bkup/*
 bin/*
+dictionaries/bin/*
