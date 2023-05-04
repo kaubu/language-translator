@@ -1,11 +1,11 @@
 import json
 import re
 
-debug = False
+DEBUG = False
 
 print("""What mode do you want to use?
-[1] Manual serialization (all glosses)
-[2] Manual serialization (raw glosses only)
+[1] Manual serialization (raw glosses only, recommended)
+[2] Manual serialization (all glosses, full of duplicates)
 [3] Serialize all .json files in a directory""")
 
 mode = input("\n>> ")
@@ -18,29 +18,48 @@ def serialize_file_raw(dictionary_path, new_file_name):
         for line in f:
             data = json.loads(line)
 
-            if debug:
+            if DEBUG:
                 print(json.dumps(data, indent=2, sort_keys=True))
                 input("Continue? ")
             
             try:
                 word = json.dumps(data["word"])
                 pos = json.dumps(data["pos"]) # Part of Speech
-            except:
+            except Exception as e:
+                if DEBUG: print(f"lvl 1 error: {e}")
                 continue # No word or parts of speech
             
             for sense in data["senses"]:
                 try:
                     dict_key = str(sense["raw_glosses"][0])
+                    
+                except Exception as e:
+                    try:
+                        dict_key = str(sense["glosses"][0])
 
-                    # Replace common error with fix
-                    key = re.sub("\[string \"Module\:Quotations\"\]\:118\: Please specify a language code in the first parameter\. The value \"(.*)\" is not valid. See Wiktionary:List of languages.", "(\\1)", dict_key)
+                    except Exception as e:
+                        if DEBUG: print(f"lvl 3 error: {e}")
+                        continue
 
-                    if key in words:
-                        words[key].append([word, pos])
-                    else:
-                        words[key] = [[word, pos]] # Index is search term, key is word
-                except:
-                    continue
+                    if DEBUG: print(f"lvl 2 error: {e}")
+                
+                # Replace common error with fix
+                key = re.sub("\[string \"Module\:Quotations\"\]\:118\: Please specify a language code in the first parameter\. The value \"(.*)\" is not valid. See Wiktionary:List of languages.", "(\\1)", dict_key)
+
+                if key in words:
+                    words[key].append([word, pos])
+                else:
+                    words[key] = [[word, pos]] # Index is search term, key is word
+    
+    # # Get rid of duplicate entries
+    # for definition in words.keys():
+    #     print(f"definition = {definition}")
+    #     # print(f"d_words = {d_words}")
+    #     input("Continue?")
+
+    #     for word in words[definition]:
+    #         print(f"word = {word}")
+    #         input("| Continue?")
 
     with open(f"./dictionaries/{new_file_name}", "w") as f:
         f.write(json.dumps(words, sort_keys=True))
@@ -53,7 +72,7 @@ def serialize_file(dictionary_path, new_file_name):
         for line in f:
             data = json.loads(line)
 
-            if debug:
+            if DEBUG:
                 print(json.dumps(data, indent=2, sort_keys=True))
                 input("Continue? ")
             
@@ -92,7 +111,7 @@ def serialize_file(dictionary_path, new_file_name):
                         words[key] = [[word, pos]] # Index is search term, key is word
                 except:
                     continue
-
+    
     with open(f"./dictionaries/{new_file_name}", "w") as f:
         f.write(json.dumps(words, sort_keys=True))
 
@@ -107,9 +126,11 @@ if mode == "1" or mode == "2":
 
         dictionary_path = f"./raw-dictionaries/{file_name}.json"
 
-        if mode == "1": serialize_file(dictionary_path, f"{file_name}.json")
+        if mode == "1": serialize_file_raw(dictionary_path, f"{file_name}.json")
         elif mode == "2":
-            serialize_file_raw(dictionary_path, f"{file_name}.json")
+            serialize_file(dictionary_path, f"{file_name}.json")
+    
+        print("Serialization complete!")
 
 elif mode == "3":
     from os import listdir
@@ -123,10 +144,12 @@ elif mode == "3":
         if isfile(join(directory, f)):
             if f.endswith(".json"):
                 files.append(f)
+    
+    files = sorted(files) # Sort them alphabetically
 
     for file in files:
         print(f"Serializing '{file}'...")
-        serialize_file(f"{directory}/{file}", file)
+        serialize_file_raw(f"{directory}/{file}", file)
         print("Serializing done!")
 else:
     print("Not a mode")

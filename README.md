@@ -9,7 +9,7 @@ languages.
 * Rather than translating entire sentences, this looks up one word or phrase
 at a time. Funtionality is planned in the future to search entire sentences,
 split and tokenize them, then return the results.
-* The entire `dictionaries/` folder is approximately 92MB, so if space is a
+* The entire `dictionaries/` folder is approximately 471 MB, so if space is a
 concern, do not download that directory.
 
 ## Usage
@@ -42,46 +42,66 @@ you can follow these steps.
 
 ## Built-in languages
 ### Proto-Languages
-* Proto-Indo-European
+* Proto-Brythonic
+* Proto-Celtic
+* Proto-Finnic
+* Proto-Germanic
+* **Proto-Indo-European**
+* Proto-Indo-Iranian
+* Proto-Italic
+* Proto-Slavic
+* Proto-West Germanic
 ### Modern
-* Spanish
-* Italian
-* German
-* Russian
-* Portuguese
-* Polish
-* French
-* Japanese
 * Arabic
+* Basque
+* Breton
+* Finnish
+* French
+* German
+* Icelandic
+* Irish
+* Italian
+* Japanese
+* Lithuanian
+* Persian (Farsi)
+* Polish
+* Portuguese
+* Russian
+* Scots
+* Scottish Gaelic
+* Spanish
+* Welsh
+* West Frisian
+* Yiddish
 ### Revived
-* Latin
-### Ancient
-* Ancient Greek
-* Middle English
-* Old English (Anglo-Saxon)
-* Old Armenian
-* Middle French
-* Old French
-* Old Saxon
-* Old High German
-* Old Norse
-* Old Swedish
-* Classical Syriac
-* Middle Irish
-* Old Irish
-* Middle Dutch
-* Old Church Slavonic
+* Hebrew
+### Ancient/Dead
 * Akkadian
+* Ancient Greek
 * Aramaic
+* Classical Syriac
 * Coptic
 * Egyptian
 * Gothic
+* Latin
+* Middle English
+* Middle French
+* Middle Irish
+* Old Church Slavonic
+* Old English (Anglo-Saxon)
+* Old French
+* Old High German
+* Old Irish
+* Old Norse
+* Old Polish
 * Sanskrit
 * Sumerian
 * Tocharian B
+* Ugratic
 ### IAL/Conlangs
 * Esperanto
 * Ido
+* Interlingua
 
 ## Misc. Notes
 ### Verbs
