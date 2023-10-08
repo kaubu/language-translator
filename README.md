@@ -47,7 +47,7 @@ You'll be given a prompt, and there you just enter the name of a language.
 
 You can also add multiple languages at once, comma delimited. To update all current languages, just paste this inside:
 ```
-akkadian,ancient greek,arabic,aramaic,basque,breton,classical syriac,coptic,egyptian,esperanto,finnish,french,german,gothic,hebrew,icelandic,ido,interlingua,irish,italian,japanese,latin,lithuanian,middle_english,middle french,middle irish,old church slavonic,old english,old french,old high german,old irish,old norse,old polish,persian,polish,portugese,proto-brythonic,proto-celtic,proto-finnic,proto-germanic,proto-indo-european,proto-indo-iranian,proto-italic,proto-slavic,proto-west germanic,russian,sanskrit,scots,scottish gaelic,spanish,sumerian,tocharian b,ugratic,welsh,west frisian,yiddish
+akkadian,ancient greek,arabic,aramaic,basque,breton,classical syriac,coptic,egyptian,esperanto,finnish,french,german,gothic,hebrew,icelandic,ido,interlingua,irish,italian,japanese,latin,lithuanian,middle_english,middle french,middle irish,old church slavonic,old english,old french,old high german,old irish,old norse,old polish,persian,polish,portuguese,proto-brythonic,proto-celtic,proto-finnic,proto-germanic,proto-indo-european,proto-indo-iranian,proto-italic,proto-slavic,proto-west germanic,russian,sanskrit,scots,scottish gaelic,spanish,sumerian,tocharian b,welsh,west frisian,yiddish
 ```
 
 ## Built-in languages
@@ -125,3 +125,7 @@ the plain verb.
 Credits to https://kaikki.org/, which supplied the majority of this codebase,
 from the mining of Wiktionary to sorting it out. I only coded this program
 which sorts through that data.
+
+<!-- 
+middle english,portuguese,proto-brythonic,proto-celtic,proto-germanic,proto-indo-european,proto-indo-iranian,proto-italic,proto-slavic,proto-west_germanic
+-->
